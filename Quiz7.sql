@@ -1,13 +1,20 @@
--- Q1
+-- Q1:
 select * 
 from payment
 where amount >= 9.99;
 
--- Q2
+-- Q2:
+
+-- Figure out max
 select max(amount)
 from payment;
 
--- Q3
+-- Find films with max amount
+select *
+from payment
+where amount = 11.99
+
+-- Q3:
 select first_name, last_name, email, address, city, country
 from staff
 left join address 
@@ -32,6 +39,6 @@ dvdrental database, there is a "one and only one" mark denoting how the 'rental'
 This essentially means that for a specific 'rental' entry, there is only one corresponding 'customer' entry; this makes
 sense, as a specific item can only be rented by one customer at a time. However, there is a "zero or one" mark denoting how
 the 'customer' table connects back to the 'rental' table. This makes sense, as a customer can choose to rent nothing; however,
-if they do, they can only rent a maximum of one specific item.
+if they do, they can only rent a maximum of one specific item. */
 
 
